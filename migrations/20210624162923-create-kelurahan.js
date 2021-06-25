@@ -8,11 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      idKec: {
-        type: Sequelize.INTEGER
+      KecamatanId: {
+        type: Sequelize.INTEGER,
+        references: { model: 'Kecamatans', key: 'id' },
+        onDelete: 'CASCADE'
       },
       namaKel: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true
       },
       createdAt: {
         allowNull: false,

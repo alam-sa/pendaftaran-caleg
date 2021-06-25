@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "postgres",
-    "database": "KPU_db_test",
+    "database": "KPU_db_coba",
     "host": "localhost",
     "dialect": "postgres"
   },

@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Candidate.hasOne(models.Upload,{foreignKey: 'idKandidat', as: 'uploads', onDelete: 'CASCADE'})
+      Candidate.hasOne(models.User,{foreignKey: 'idUser', as: 'users', onDelete: 'CASCADE'})
     }
   };
   Candidate.init({

@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
   Kecamatan.init({
     namaKec: {
       type: DataTypes.STRING,
+      unique: {
+        args: true,
+        msg: "Data kecamatan sudah ada!"
+      },
       validate: {
         notEmpty: {
           args: true,

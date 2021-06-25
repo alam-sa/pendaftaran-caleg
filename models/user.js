@@ -19,14 +19,19 @@ module.exports = (sequelize, DataTypes) => {
     idUser: DataTypes.INTEGER,
     email: {
       type: DataTypes.STRING,
+      allowNull: false,
       unique: {
         args: true,
-        msg: 'Email telah digunakan!'
+        msg: "Email telah digunakan!"
       },
       validate: {
         isEmail: {
           args: true,
           msg: 'Invalid email format!'
+        },
+        notEmpty: {
+          args: true,
+          msg: "Masukkan Email anda!"
         }
       }
     },
